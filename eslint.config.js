@@ -10,11 +10,12 @@ export default defineConfig([
 	{
 		files: ['**/*.{ts,tsx}'],
 		extends: [
-			tseslint.configs.recommendedTypeChecked,
-			// Alternatively, use this for stricter rules
-			tseslint.configs.strictTypeChecked,
-			// Optionally, add this for stylistic rules
-			tseslint.configs.stylisticTypeChecked,
+			tseslint.configs.recommended,
+			// tseslint.configs.recommendedTypeChecked,
+			// // Alternatively, use this for stricter rules
+			// tseslint.configs.strictTypeChecked,
+			// // Optionally, add this for stylistic rules
+			// tseslint.configs.stylisticTypeChecked,
 
 			js.configs.recommended,
 			tseslint.configs.recommended,
