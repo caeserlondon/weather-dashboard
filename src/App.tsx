@@ -1,9 +1,13 @@
+import { useQuery } from '@tanstack/react-query';
+import { getWeather } from './api';
+
 function App() {
-	return (
-		<>
-			<h1>Hellow world</h1>
-		</>
-	);
+	const { data } = useQuery({
+		queryKey: ['weather'],
+		queryFn: () => getWeather({ lat: 50, lon: -1 }),
+	});
+
+	return <>{JSON.stringify(data)}</>;
 }
 
 export default App;
